@@ -67,3 +67,8 @@ unfortunately, as of Dec 25, 2012 you'll fail "Bundling is not yet supported on 
 * if you have appserv you'll got port 80 collision, so need to change port on server.js to other port
 'var port = process.env.PORT ? parseInt(process.env.PORT) : 80;'
 node main.js
+
+## step extra: push this tutorial to github
+* create new repo at https://github.com/new
+* add github server by type 'git remote add origin https://github.com/gampolt/meteor-tour.git'
+* upload to server 'git push -u origin master'
