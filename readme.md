@@ -1,5 +1,6 @@
 # Meteor Framework - 25 Dec 2012
 This file create from tour video of meteor project from http://www.meteor.com/screencast
+The project is use for demo ability of meteor framework by create software that display color name and let people to like it
 
 ## step 1: initial stage -- create project and git store
 * get meteor from http://win.meteor.com
@@ -83,5 +84,14 @@ your.gitconfig setup your configuration about password
 
 you should downoad git-credential-winstore also to resolve problem in windows
 look at [here](http://stackoverflow.com/questions/11693074/git-credential-cache-is-not-a-git-command) for more detail
+
+## step extra3: how to download your project back to PC and run
+* go to any folder
+* `git clone https://github.com/gampolt/meteor-tour.git`
+* `cd meteor-tour`
+* `meteor run`
+* open browser at http://localhost:3000
+
+Good luck for your meteor journey :)
 
 
