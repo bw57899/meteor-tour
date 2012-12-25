@@ -35,4 +35,7 @@ this step has no code change. but one more time show you via google chrome conso
 * Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  
 * Color.**remove**({likes: 2})  
 
+## step 7: Hot Code Push
+show you that when you modify js file on server side. result immediately reflect to all open client --> user selection on color still maintain
+ this is like you "push" the update software
 
