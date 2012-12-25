@@ -72,3 +72,16 @@ node main.js
 * create new repo at https://github.com/new
 * add github server by type 'git remote add origin https://github.com/gampolt/meteor-tour.git'
 * upload to server 'git push -u origin master'
+
+## step extra2: let's git remember your credential
+your.gitconfig setup your configuration about password
+[user]
+	email = xxxxx@xmail.com
+	name = xxxxx
+[credential]
+	helper = cache --timeout=3600
+
+you should downoad git-credential-winstore also to resolve problem in windows
+look at [here](http://stackoverflow.com/questions/11693074/git-credential-cache-is-not-a-git-command) for more detail
+
+
