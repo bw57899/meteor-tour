@@ -14,3 +14,5 @@ git add tour.html #after edit html browser will live reload
 git commit --message "live reload"
 git log #master see history of master branch
 
+repeat all the step
+

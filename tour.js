@@ -5,6 +5,12 @@ if (Meteor.isClient) {
     return Colors.find({}, {sort: {likes:-1, name:1}});
   };
   
+  Template.color_list.events = {
+    'click button': function(){
+      Colors.update(Session.get('session_color'), {$inc: {likes: 1}});
+    }
+  };
+  
   Template.color_info.maybe_selected = function(){
     return Session.equals('session_color', this._id) ? "selected" : ""; 
   };

@@ -13,8 +13,14 @@
   {{else}}
     No colors yet.
   {{/each}}
+  <div class="footer">
+    <button>Like!</button>
+  </div>
 </template>
 
+
 <template name="color_info">
-<li class="{{maybe_selected}}">{{name}}</li>
+  <li class="{{maybe_selected}}">
+    {{likes}} people like {{name}}
+  </li>
 </template>
