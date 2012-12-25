@@ -42,3 +42,9 @@ show you that when you modify js file on server side. result immediately reflect
 ## step 8: reverse function call
 instead of server emit data to template.  
 You can do by specify parameter in template, this case is {{how_many}} and let's server side to execute the code once this {{how_many}} value changes
+
+## step 9: deploy to meteor.com
+this can do by single "deploy" command
+`meteor deploy gt-colors.meteor.com`
+noted: at the time I write, meteor 0.5.2 have rpc_callback bug so cannot upload from my Windows system. It's will fix on version 0.5.3
+
