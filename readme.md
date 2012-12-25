@@ -44,7 +44,26 @@ instead of server emit data to template.
 You can do by specify parameter in template, this case is {{how_many}} and let's server side to execute the code once this {{how_many}} value changes
 
 ## step 9: deploy to meteor.com
-this can do by single "deploy" command
+this can do by single "deploy" command  
 `meteor deploy gt-colors.meteor.com`
-noted: at the time I write, meteor 0.5.2 have rpc_callback bug so cannot upload from my Windows system. It's will fix on version 0.5.3
+> noted: at the time I write, meteor 0.5.2 have rpc_callback bug so cannot > upload from my Windows system. It's will fix on version 0.5.3
 
+## step 10: latency compensation
+no code for this step. Just show you how application work in real internet life, which database is too slow to wait. What meteor do is update user interface in advance to prevent sluggishness (you should watch screencast)
+
+## step 11: self hosted deployment
+this can be done by "bundle" command  
+`meteor bundle gt-colors.tgz`  
+After you've got tgz file then extract and setup per README.md state.
+
+unfortunately, as of Dec 25, 2012 you'll fail "Bundling is not yet supported on Windows. This requires reimplementing the (un)archiving of the bundle..." So here's workaround
+
+* copy folder "\.meteor\local\build_tar\bundle\" underneath your project to whatever directory you want
+* npm install fibers
+* set environment variable by type  
+'set MONGO_URL=mongodb://127.0.0.1:27017/test'  
+'set ROOT_URL=http://example.com'  
+'set MAIL_URL=smtp://test:hana@mailhost:25/'  
+* if you have appserv you'll got port 80 collision, so need to change port on server.js to other port
+'var port = process.env.PORT ? parseInt(process.env.PORT) : 80;'
+node main.js
