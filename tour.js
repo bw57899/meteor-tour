@@ -15,6 +15,13 @@ if (Meteor.isClient) {
     return Session.equals('session_color', this._id) ? "selected" : ""; 
   };
   
+  Template.color_info.how_many = function(){
+    if (!this.likes) return "no";
+    if (this.likes < 5) return "a few";
+    if (this.likes < 10) return "some";
+    return "a lot of";
+  };
+  
   Template.color_info.events = {
     'click': function(){
       Session.set('session_color', this._id);

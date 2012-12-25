@@ -39,3 +39,6 @@ this step has no code change. but one more time show you via google chrome conso
 show you that when you modify js file on server side. result immediately reflect to all open client --> user selection on color still maintain
  this is like you "push" the update software
 
+## step 8: reverse function call
+instead of server emit data to template.  
+You can do by specify parameter in template, this case is {{how_many}} and let's server side to execute the code once this {{how_many}} value changes
