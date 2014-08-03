@@ -13,24 +13,32 @@ The project is use for demo ability of meteor framework by create software that 
 * `meteor`
 * open browse to localhost:3000
 
-## step 3: template and mongo client API
-this step show that you can use mongo api from client side (web browser)!!
-also html file show you a bit about how to use template
-
-## step 4: Color on click
-this step will implement color change when item was click.
-It's show how to use Session and click event
-
-## step 5: Exchange info
-this step implement like button. Which when clicked will update like count on all browser.  
-It's show you one more time about template and event implementation
-
-## step 6: Mongo DB API at client side
+## step 3: Mongo DB API at client side
 Show you via google chrome developer javascript console that you can do lots of db api from client side. eg.  
 * Colors.**insert**({name: "Red"})             		# insert a new line with red color
 * Colors.**find**({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times
 * Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.
 * Color.**remove**({likes: 2})  			# no permitted, can't run it from client site.
+
+## step 4: Mongo DB update at server side
+    run another console, cd to tour folder
+    meteor mongo
+You will see the mongo shell
+`$ meteor mongo`
+`MongoDB shell version: 2.4.9`
+`connecting to: 127.0.0.1:3001/meteor`
+`> show dbs`
+`local   (empty)`
+`meteor  0.0625GB`
+`> use meteor`
+`switched to db meteor`
+`> show collections`
+`colors`
+`system.indexes`
+`> db.colors.find()`
+`{ "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }`
+`{ "_id" : "4drhYwn65EHKnMJ94", "likes" : 5, "name" : "red" }`
+
 
 ## step 7: Hot Code Push
 show you that when you modify js file on server side. result immediately reflect to all open client --> user selection on color still maintain
