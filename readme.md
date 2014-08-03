@@ -1,22 +1,17 @@
-# Meteor Framework - 25 Dec 2012
+# Meteor Framework
 This file create from tour video of meteor project from http://www.meteor.com/screencast
 The project is use for demo ability of meteor framework by create software that display color name and let people to like it
 
 ## step 1: initial stage -- create project and git store
-* get meteor from http://win.meteor.com
+* `curl https://install.meteor.com/ | sh`
 * `meteor create tour`
+* `git clone https://github.com/bw57899/meteor-tour`
 * `cd tour` 
-* `git init`
-> other useful command = git help, git status  
-* `git add --all` to add all file in root folder, not include .meteor files
-`git commit --all --message "step 1: initial stage"`
+* `cp ../meteor-tour/* .`
 
 ## step 2: live reload -- show that after HTML edit browser will auto reload
-* `meteor run`
+* `meteor`
 * open browse to localhost:3000
-* `git add tour.html` --> after edit html browser will live reload
-* `git commit --message "live reload"`
-> `git log` to see history of master branch, use **q** to exit
 
 ## step 3: template and mongo client API
 this step show that you can use mongo api from client side (web browser)!!
@@ -32,6 +27,7 @@ It's show you one more time about template and event implementation
 
 ## step 6: Mongo DB API at client side
 this step has no code change. but one more time show you via google chrome console that you can do lots of db api from client side. eg.  
+* Colors.**insert**({name: "Red"})
 * Colors.**find**({likes: {$gt: 2}}).fetch()  
 * Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  
 * Color.**remove**({likes: 2})  
