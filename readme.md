@@ -15,10 +15,10 @@ The project is use for demo ability of meteor framework by create software that 
 
 ## step 3: Mongo DB API at client side
 Show you via google chrome developer javascript console that you can do lots of db api from client side. eg.
-```Colors.insert({name: "Red"})             		# insert a new line with red color
-Colors.find({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times
-Colors.update({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.
-Colors.remove({likes: 2})  				# no permitted, can't run it from client site.```
+```Colors.insert({name: "Red"})             		# insert a new line with red color```
+```Colors.find({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times```
+```Colors.update({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.```
+```Colors.remove({likes: 2})  				# no permitted, can't run it from client site.```
 
 ## step 4: Mongo DB update at server side
     run another console, cd to tour folder
