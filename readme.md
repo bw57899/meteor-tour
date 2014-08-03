@@ -26,18 +26,18 @@ Show you via google chrome developer javascript console that you can do lots of 
 You will see the mongo shell
     $ meteor mongo
     MongoDB shell version: 2.4.9
-`connecting to: 127.0.0.1:3001/meteor`
-`> show dbs`
-`local   (empty)`
-`meteor  0.0625GB`
-`> use meteor`
-`switched to db meteor`
-`> show collections`
-`colors`
-`system.indexes`
-`> db.colors.find()`
-`{ "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }`
-`{ "_id" : "4drhYwn65EHKnMJ94", "likes" : 5, "name" : "red" }`
+    connecting to: 127.0.0.1:3001/meteor
+    > show dbs
+    local   (empty)
+    meteor  0.0625GB
+    > use meteor
+    switched to db meteor
+    > show collections
+    colors
+    system.indexes
+    > db.colors.find()
+    { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
+    { "_id" : "4drhYwn65EHKnMJ94", "likes" : 5, "name" : "red" }
 
 
 ## step 7: Hot Code Push
