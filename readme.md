@@ -26,11 +26,11 @@ this step implement like button. Which when clicked will update like count on al
 It's show you one more time about template and event implementation
 
 ## step 6: Mongo DB API at client side
-this step has no code change. but one more time show you via google chrome console that you can do lots of db api from client side. eg.  
-* Colors.**insert**({name: "Red"})
-* Colors.**find**({likes: {$gt: 2}}).fetch()  
-* Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  
-* Color.**remove**({likes: 2})  
+Show you via google chrome developer javascript console that you can do lots of db api from client side. eg.  
+* Colors.**insert**({name: "Red"})             		# insert a new line with red color
+* Colors.**find**({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times
+* Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.
+* Color.**remove**({likes: 2})  			# no permitted, can't run it from client site.
 
 ## step 7: Hot Code Push
 show you that when you modify js file on server side. result immediately reflect to all open client --> user selection on color still maintain
