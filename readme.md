@@ -3,22 +3,22 @@ This file create from tour video of meteor project from http://www.meteor.com/sc
 The project is use for demo ability of meteor framework by create software that display color name and let people to like it
 
 ## step 1: initial stage -- create project and git store
-* `curl https://install.meteor.com/ | sh`
-* `meteor create tour`
-* `git clone https://github.com/bw57899/meteor-tour`
-* `cd tour` 
-* `cp ../meteor-tour/* .`
+	curl https://install.meteor.com/ | sh
+	meteor create tour
+	git clone https://github.com/bw57899/meteor-tour
+	cd tour
+	cp ../meteor-tour/* .
 
 ## step 2: live reload -- show that after HTML edit browser will auto reload
-* `meteor`
-* open browse to localhost:3000
+	meteor
+	open browse to localhost:3000
 
 ## step 3: Mongo DB API at client side
-Show you via google chrome developer javascript console that you can do lots of db api from client side. eg.  
-* Colors.**insert**({name: "Red"})             		# insert a new line with red color
-* Colors.**find**({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times
-* Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.
-* Colors.**remove**({likes: 2})  			# no permitted, can't run it from client site.
+Show you via google chrome developer javascript console that you can do lots of db api from client side. eg.  	
+	Colors.insert({name: "Red"})             		# insert a new line with red color
+	Colors.find({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times
+	Colors.update({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.
+	Colors.remove({likes: 2})  			# no permitted, can't run it from client site.
 
 ## step 4: Mongo DB update at server side
     run another console, cd to tour folder
