@@ -24,8 +24,8 @@ Show you via google chrome developer javascript console that you can do lots of 
     run another console, cd to tour folder
     meteor mongo
 You will see the mongo shell
-`$ meteor mongo`
-`MongoDB shell version: 2.4.9`
+    $ meteor mongo
+    MongoDB shell version: 2.4.9
 `connecting to: 127.0.0.1:3001/meteor`
 `> show dbs`
 `local   (empty)`
