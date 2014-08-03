@@ -38,6 +38,13 @@ You will see the mongo shell
     > db.colors.find()
     { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
     { "_id" : "4drhYwn65EHKnMJ94", "likes" : 5, "name" : "red" }
+    > db.colors.remove({name: "red"})
+    > db.colors.find()
+    { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
+    > db.colors.insert({name: "red"})
+    > db.colors.find()
+    { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
+    { "_id" : ObjectId("53dddd0190600fb739ec5aea"), "name" : "Red" }
 
 
 ## step 7: Hot Code Push
