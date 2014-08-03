@@ -18,31 +18,31 @@ Show you via google chrome developer javascript console that you can do lots of 
 * Colors.**insert**({name: "Red"})             		# insert a new line with red color
 * Colors.**find**({likes: {$gt: 2}}).fetch()  		# show the color(s) with clicks more than 2 times
 * Colors.**update**({likes: {$gt: 2}}, {$inc: {like: 10}}, {multi: true})  # no permitted, can't run it from client site.
-* Color.**remove**({likes: 2})  			# no permitted, can't run it from client site.
+* Colors.**remove**({likes: 2})  			# no permitted, can't run it from client site.
 
 ## step 4: Mongo DB update at server side
     run another console, cd to tour folder
     meteor mongo
-You will see the mongo shell
-    $ meteor mongo
-    MongoDB shell version: 2.4.9
-    connecting to: 127.0.0.1:3001/meteor
-    > show dbs
+    
+    show dbs
     local   (empty)
     meteor  0.0625GB
-    > use meteor
-    switched to db meteor
-    > show collections
+    
+    use meteor
+    show collections
     colors
     system.indexes
-    > db.colors.find()
+    
+    db.colors.find()
     { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
     { "_id" : "4drhYwn65EHKnMJ94", "likes" : 5, "name" : "red" }
-    > db.colors.remove({name: "red"})
-    > db.colors.find()
+    
+    db.colors.remove({name: "red"})
+    db.colors.find()
     { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
-    > db.colors.insert({name: "red"})
-    > db.colors.find()
+    
+    db.colors.insert({name: "red"})
+    db.colors.find()
     { "_id" : "TfyYPxpmSePL8GuKC", "likes" : 12, "name" : "blue" }
     { "_id" : ObjectId("53dddd0190600fb739ec5aea"), "name" : "Red" }
 
